@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing.Printing;
+using System.IO;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Web.Security;
 using System.Web.Services.Description;
 using System.Web.UI;
+
 
 namespace A5
 {
@@ -41,6 +43,14 @@ namespace A5
             users["user"] = new List<string> { "123", "2" };
             users["TA"] = new List<string> { "Cse445", "1" };
             users["member"] = new List<string> { "123", "2" };
+
+            // Check if user.xml exists
+            if (!File.Exists(Server.MapPath("user.xml")))
+            {
+                // Create user.xml
+                File.Create(Server.MapPath("user.xml")).Close();
+            }
+
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -79,7 +89,7 @@ namespace A5
                 rsclient = new RandoomStringService.ServiceClient();
             }
             string rstr = rsclient.GetRandomString("5");
-            
+
             return rstr;
         }
 
@@ -109,7 +119,7 @@ namespace A5
             }
         }
 
-        public int Login(string username,string password)
+        public int Login(string username, string password)
         {
             int role = 0;
             if (ValidateUser(username, password))
@@ -134,7 +144,7 @@ namespace A5
             //Response.Redirect("~/Login.aspx");
         }
 
-        public bool ValidateCaptcha(string response,string targetstring)
+        public bool ValidateCaptcha(string response, string targetstring)
         {
             //string targetstring = Session["RandomString"] as string;
             if (targetstring != response)

@@ -12,14 +12,17 @@
 # Useful info
 
 ## WebStar Server: 104 - url
-`http://webstrarx104.fulton.asu.edu/page0/Default.aspx`
+`http://webstrar104.fulton.asu.edu`
+`http://webstrar104.fulton.asu.edu/page0/Default.aspx`
 
 ## WebStar Map Network Drive: MND 
-`Access:\\webstrar.fulton.asu.edu\website104`
+Access:`\\webstrar.fulton.asu.edu\website104`
+change user to `asuad\ASURITE`
 
 ## Cisco VPN download:
 `https://sslvpn.asu.edu/+CSCOE+/logon.html`
 `https://myapps.asu.edu/app/cisco-ssl-vpn-0`
 
 ## Cisco VPN link:
-`sslvpn.asu.edu` (not work for me)
+`sslvpn.asu.edu` 
+typing `push` in second password
