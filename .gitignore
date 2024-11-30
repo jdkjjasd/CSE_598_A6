@@ -1,4 +1,5 @@
 # Ignore cache files
 *.cache
 *.vsidx
-.vs/*
+.vs/
+.vscode/
