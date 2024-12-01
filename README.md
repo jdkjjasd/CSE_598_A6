@@ -21,6 +21,8 @@
 | Documentation       |                    |                    |
 | Integrated          | Sun, Max, Mcquitty, Drake, Mehta, Gautam | |
 | Project Management  | Sun, Max           | |
+| Local Host Testing | Sun, Max||
+| WebStar Testing|Mcquitty, Drake||
 
 
 
