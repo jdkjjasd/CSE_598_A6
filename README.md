@@ -1,9 +1,26 @@
 # ASU CSE-445-598 Assignment 6 Team Project
 
-## Members:
-- Mcquitty, Drake
-- Mehta, Gautam
-- Sun, Max
+* ## Members:
+| Name           | Work Percentage |
+|----------------|------------------|
+| Mcquitty, Drake|                  |
+| Mehta, Gautam  |                  |
+| Sun, Max       |                  |
+
+* ## Components Summary
+| Task                | Completed By       | Description        |
+|---------------------|--------------------|--------------------|
+| User Control        | Sun, Max           | Log in page and authentication verification with fake captcha by ASU random string service |
+| DLL                 | Mehta, Gautam      | Hashing function: Input: String, Output: String |
+| Cookies             | Mcquitty, Drake    | Stores user preferences |
+| WebStar Deployed    | Mcquitty, Drake    | Deployed IIS Service |
+| XML                 | Sun, Max           | Store account info |
+| Staff Page          | Sun, Max           | Account management |
+| Member Page         |                    |                    |
+| TryIt Page          |                    |                    |
+| Documentation       |                    |                    |
+
+
 
 ---
 ---
