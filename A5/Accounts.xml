@@ -35,4 +35,32 @@
       <role>2</role>
     </Account>
   </AccountEntry>
+  <AccountEntry Username="temp1">
+    <Account>
+      <username>temp1</username>
+      <enc_password>111</enc_password>
+      <role>2</role>
+    </Account>
+  </AccountEntry>
+  <AccountEntry Username="temp2">
+    <Account>
+      <username>temp2</username>
+      <enc_password>222</enc_password>
+      <role>2</role>
+    </Account>
+  </AccountEntry>
+  <AccountEntry Username="temp33">
+    <Account>
+      <username>temp33</username>
+      <enc_password>333</enc_password>
+      <role>2</role>
+    </Account>
+  </AccountEntry>
+  <AccountEntry Username="444">
+    <Account>
+      <username>444</username>
+      <enc_password>444</enc_password>
+      <role>2</role>
+    </Account>
+  </AccountEntry>
 </Accounts>

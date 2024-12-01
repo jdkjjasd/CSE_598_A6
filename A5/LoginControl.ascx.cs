@@ -123,6 +123,7 @@ namespace A5
 
                 Session["RandomString"] = rstring;
                 lblRString.Text = rstring;
+                lblRString1.Text = rstring;
             }
         }
         protected void Page_Unload(object sender, EventArgs e)
@@ -138,6 +139,7 @@ namespace A5
             rstring = newString();
             lblRString.Text = rstring;
             Session["RandomString"] = rstring;
+            lblRString1.Text = rstring;
         }
 
         public string newString()
@@ -158,6 +160,8 @@ namespace A5
             string inputRString = txtRString.Text;
             string targetRString = Session["RandomString"] as string;
 
+            
+
             if (!ValidateCaptcha(inputRString, targetRString))
             {
                 lblMessage.Text = "Invalid random string.";
@@ -175,6 +179,10 @@ namespace A5
                 lblMessage.Text = "Login successful!";
                 RedirectUser(role, Response);
             }
+
+            
+
+
         }
 
         public int Login(string username, string password)
@@ -198,8 +206,18 @@ namespace A5
             string username = txtSignUpUsername.Text.Trim();
             string password = txtSignUpPassword.Text;
             string rePassword = txtSignUpRePassword.Text;
+            string inputRString = txtRString1.Text;
+            string targetRString = Session["RandomString"] as string;
 
-            // 验证输入
+            if (!ValidateCaptcha(inputRString, targetRString))
+            {
+                lblSignUpMessage.Text = "Invalid random string.";
+                lblSignUpMessage.ForeColor = System.Drawing.Color.Red;
+
+                return;
+            }
+
+
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(rePassword))
             {
                 lblSignUpMessage.Text = "All fields are required.";
@@ -221,10 +239,10 @@ namespace A5
                 lblSignUpMessage.Text = "Sign up successful!";
                 lblSignUpMessage.ForeColor = System.Drawing.Color.Green;
 
-                // 清空输入框
                 txtSignUpUsername.Text = string.Empty;
                 txtSignUpPassword.Text = string.Empty;
                 txtSignUpRePassword.Text = string.Empty;
+                txtRString1.Text = string.Empty;
             }
             else
             {
@@ -244,6 +262,7 @@ namespace A5
 
         public bool ValidateCaptcha(string response, string targetstring)
         {
+            Session["RandomString"] = rsclient.GetRandomString("5");
             //string targetstring = Session["RandomString"] as string;
             if (targetstring != response)
             {

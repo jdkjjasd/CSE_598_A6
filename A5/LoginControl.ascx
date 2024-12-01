@@ -26,6 +26,10 @@
     <asp:Label ID="lblSignUpRePassword" runat="server" Text="Re-enter Password:" AssociatedControlID="txtSignUpRePassword"></asp:Label>
     <asp:TextBox ID="txtSignUpRePassword" runat="server" TextMode="Password"></asp:TextBox>
     <br />
+    <asp:Label ID="lblRandomstr1" runat="server" Text="Random String"></asp:Label> <asp:Label ID="lblRString1" runat="server" Text="" AssociatedControlID="txtPassword"></asp:Label>
+    <asp:TextBox ID="txtRString1" runat="server"></asp:TextBox>
+    <br />     
+    <asp:Button ID="btnNewString1" runat="server" Text="New String" OnClick="btnNewString_Click" />
     <asp:Button ID="btnSignUp" runat="server" Text="Sign Up" OnClick="btnSignUp_Click" />
     <asp:Label ID="lblSignUpMessage" runat="server" ForeColor="Green"></asp:Label>
 </asp:Panel>

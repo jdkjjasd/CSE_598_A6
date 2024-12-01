@@ -116,5 +116,8 @@ namespace A5
         protected global::System.Web.UI.WebControls.TextBox txtSignUpPassword;
         protected global::System.Web.UI.WebControls.TextBox txtSignUpRePassword;
         protected global::System.Web.UI.WebControls.Label lblSignUpMessage;
+        protected global::System.Web.UI.WebControls.Label lblRString1;
+        protected global::System.Web.UI.WebControls.TextBox txtRString1;
+        protected global::System.Web.UI.WebControls.Button btnNewString1;
     }
 }
