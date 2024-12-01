@@ -66,6 +66,9 @@ namespace A5
 
     public partial class LoginControl : System.Web.UI.UserControl
     {
+        private static LoginControl _instance; // singleton instance
+        private static readonly object _lock = new object(); // thread lock object
+
         private RandoomStringService.ServiceClient rsclient;
         private string rstring;
 
@@ -84,6 +87,13 @@ namespace A5
             accountFilePath = root + "Accounts.xml";
             logFilePath = root + "log.log";
             rsclient = new RandoomStringService.ServiceClient();
+            if (!File.Exists(accountFilePath))
+            {
+                // Create user.xml
+                File.Create(accountFilePath).Close();
+                Init_User_Xml();
+            }
+            Read_User_Xml();
         }
 
         public void Page_Init()
@@ -99,16 +109,6 @@ namespace A5
             //users["user"] = new List<string> { "123", "2" };
             //users["TA"] = new List<string> { "Cse445", "1" };
             //users["member"] = new List<string> { "123", "2" };
-
-            // Check if user.xml exists
-            if (!File.Exists(accountFilePath))
-            {
-                // Create user.xml
-                File.Create(accountFilePath).Close();
-                Init_User_Xml();
-            }
-            Read_User_Xml();
-            //addAccount("admin111", "123123", 1);
 
         }
 
@@ -282,6 +282,7 @@ namespace A5
             Account account = new Account(username, PasswordEncrypt(password), role);
             accountList.AccountEntries.Add(new AccountEntry { Username = username, Account = account });
             Save_User_Xml(accountList, accountFilePath);
+            Read_User_Xml();
 
             //foreach (var kvp in accountList.AccountsDictionary)
             //{
@@ -308,6 +309,7 @@ namespace A5
             {
                 accountList.AccountEntries.RemoveAll(entry => entry.Username == username);
                 Save_User_Xml(accountList, accountFilePath);
+                Read_User_Xml();
                 return 1;
             }
             return 0;
@@ -360,6 +362,24 @@ namespace A5
                 default:
                     response.Redirect("~/Default.aspx", false);
                     break;
+            }
+        }
+
+        public static LoginControl Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    lock (_lock)
+                    {
+                        if (_instance == null)
+                        {
+                            _instance = new LoginControl();
+                        }
+                    }
+                }
+                return _instance;
             }
         }
 

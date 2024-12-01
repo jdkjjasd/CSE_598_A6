@@ -24,6 +24,10 @@ namespace A5
             {
                 Response.Redirect("~/Default.aspx");
             }
+
+            //LoginControl.Instance.addAccount("staff", "staff", 1); // example of adding a staff account
+
+
         }
 
         protected void btnBack_Click(object sender, EventArgs e)

@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\logincontrol.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|f:\\\u4F5C\u4E1A\\asu\\cse 598\\a6\\a5\\logincontrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\logincontrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|f:\\\u4F5C\u4E1A\\asu\\cse 598\\a6\\a5\\staff.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\staff.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|f:\\\u4F5C\u4E1A\\asu\\cse 598\\a6\\a5\\scripts\\bootstrap.bundle.js.map||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\scripts\\bootstrap.bundle.js.map||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|f:\\\u4F5C\u4E1A\\asu\\cse 598\\a6\\a5\\scripts\\bootstrap.bundle.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\scripts\\bootstrap.bundle.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|f:\\\u4F5C\u4E1A\\asu\\cse 598\\a6\\a5\\logincontrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\logincontrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "Staff.aspx.cs",
+              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\A5\\Staff.aspx.cs",
+              "RelativeDocumentMoniker": "A5\\Staff.aspx.cs",
+              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\A5\\Staff.aspx.cs",
+              "RelativeToolTip": "A5\\Staff.aspx.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvxkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T01:31:10.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "bootstrap.bundle.js.map",
               "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\A5\\Scripts\\bootstrap.bundle.js.map",
               "RelativeDocumentMoniker": "A5\\Scripts\\bootstrap.bundle.js.map",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "bootstrap.bundle.js",
               "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\A5\\Scripts\\bootstrap.bundle.js",
               "RelativeDocumentMoniker": "A5\\Scripts\\bootstrap.bundle.js",
@@ -62,14 +79,14 @@
               "RelativeDocumentMoniker": "A5\\LoginControl.ascx.cs",
               "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\A5\\LoginControl.ascx.cs",
               "RelativeToolTip": "A5\\LoginControl.ascx.cs",
-              "ViewState": "AgIAACYBAAAAAAAAAAAAwDQBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC8BAAAAAAAAAAAAAEYBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-30T23:37:09.731Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "LoginControl.ascx",
               "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\A5\\LoginControl.ascx",
               "RelativeDocumentMoniker": "A5\\LoginControl.ascx",

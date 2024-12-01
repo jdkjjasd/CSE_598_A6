@@ -28,10 +28,10 @@
       <role>2</role>
     </Account>
   </AccountEntry>
-  <AccountEntry Username="admin111">
+  <AccountEntry Username="staff">
     <Account>
-      <username>admin111</username>
-      <enc_password>123123</enc_password>
+      <username>staff</username>
+      <enc_password>staff</enc_password>
       <role>1</role>
     </Account>
   </AccountEntry>
