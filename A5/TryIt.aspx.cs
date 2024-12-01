@@ -7,9 +7,14 @@ namespace A5
     {
         private LoginControl loginControl;
 
+        public TryIt()
+        {
+            loginControl = LoginControl.Instance;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            loginControl = new LoginControl();
+            //loginControl = new LoginControl();
             if (!IsPostBack)
             {
                 loginControl.Page_Init();
@@ -29,8 +34,8 @@ namespace A5
             string password = txtPassword.Text;
             string inputRString = txtRString.Text;
             string targetRString = Session["RandomString"] as string;
-            loginControl = new LoginControl();
-            loginControl.Page_Init();
+            //loginControl = LoginControl.Instance;
+            //loginControl.Page_Init();
 
             if (!loginControl.ValidateCaptcha(inputRString,targetRString))
             {
@@ -53,7 +58,7 @@ namespace A5
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            loginControl = new LoginControl();
+            //loginControl = new LoginControl();
             loginControl.Page_Init();
             loginControl.logOut();
             Response.Redirect(Request.RawUrl);
@@ -61,7 +66,7 @@ namespace A5
 
         private void GenerateNewRandomString()
         {
-            loginControl = new LoginControl();
+            //loginControl = new LoginControl();
             loginControl.Page_Init();
             string rstring = loginControl.newString();
             Session["RandomString"] = rstring;

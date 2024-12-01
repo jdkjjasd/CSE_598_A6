@@ -19,6 +19,8 @@
 | Member Page         |                    |                    |
 | TryIt Page          |                    |                    |
 | Documentation       |                    |                    |
+| Integrated          | Sun, Max, Mcquitty, Drake, Mehta, Gautam | |
+| Project Management  | Sun, Max           | |
 
 
 

@@ -8,15 +8,9 @@
     <form id="form1" runat="server">
         <div>
             <h2>TryIt Interface for Testing Login Functionality</h2>
-            <p>Welcome to the TryIt page. This page is designed to help you test the login functionality of our application. Below, you will find a form where you can enter your credentials to test the login feature.</p>
-            <p>The current hardcoded user list is as follows:</p>
-            <ul>
-                <li><strong>Username:</strong> admin, <strong>Password:</strong> 123, <strong>Role:</strong> Staff</li>
-                <li><strong>Username:</strong> user, <strong>Password:</strong> 123, <strong>Role:</strong> Member</li>
-                <li><strong>Username:</strong> TA, <strong>Password:</strong> Cse445, <strong>Role:</strong> Staff</li>
-                <li><strong>Username:</strong> member, <strong>Password:</strong> 123, <strong>Role:</strong> Member</li>
-            </ul>
-            <h2>Current Login User: <asp:Label ID="lblWelcome" runat="server" Text=""></asp:Label></h2>
+            <p>Welcome to the TryIt page. This page is designed to help you test the functionality of our application. </p>
+            <h2>User Control:</h2>
+            <h3>Current Login User: <asp:Label ID="lblWelcome" runat="server" Text=""></asp:Label></h3>
             <p>Features you can test on this page:</p>
             <ul>
                 <li>Generate a new random string to use for login verification.</li>
