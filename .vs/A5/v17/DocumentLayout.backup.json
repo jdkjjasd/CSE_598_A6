@@ -1,86 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\",
+  "WorkspaceRootPath": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|f:\\\u4F5C\u4E1A\\asu\\cse 598\\a5\\a5\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\tryit.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\tryit.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\tryit.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\tryit.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\logincontrol.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|f:\\\u4F5C\u4E1A\\asu\\cse 598\\a6\\a5\\logincontrol.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\logincontrol.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\tryit.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\tryit.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|f:\\\u4F5C\u4E1A\\asu\\cse 598\\a6\\a5\\scripts\\bootstrap.bundle.js.map||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\scripts\\bootstrap.bundle.js.map||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\member.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\member.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|f:\\\u4F5C\u4E1A\\asu\\cse 598\\a6\\a5\\scripts\\bootstrap.bundle.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\scripts\\bootstrap.bundle.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\default.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\default.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\member.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\member.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\logincontrol.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\logincontrol.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\logincontrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|f:\\\u4F5C\u4E1A\\asu\\cse 598\\a6\\a5\\logincontrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
       "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\logincontrol.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\member.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\member.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\staff.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\staff.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\staff.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\staff.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\staff.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\staff.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\connected services\\randoomstringservice\\configuration91.svcinfo||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\connected services\\randoomstringservice\\configuration91.svcinfo||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\a5\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -89,250 +25,60 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 184,
-          "SelectedChildIndex": 13,
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TryIt.aspx.designer.cs",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\TryIt.aspx.designer.cs",
-              "RelativeDocumentMoniker": "A5\\TryIt.aspx.designer.cs",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\TryIt.aspx.designer.cs",
-              "RelativeToolTip": "A5\\TryIt.aspx.designer.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwCQAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T04:04:02.384Z"
+              "DocumentIndex": 1,
+              "Title": "bootstrap.bundle.js.map",
+              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\A5\\Scripts\\bootstrap.bundle.js.map",
+              "RelativeDocumentMoniker": "A5\\Scripts\\bootstrap.bundle.js.map",
+              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\A5\\Scripts\\bootstrap.bundle.js.map",
+              "RelativeToolTip": "A5\\Scripts\\bootstrap.bundle.js.map",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-01T00:35:22.811Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TryIt.aspx.cs",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\TryIt.aspx.cs",
-              "RelativeDocumentMoniker": "A5\\TryIt.aspx.cs",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\TryIt.aspx.cs",
-              "RelativeToolTip": "A5\\TryIt.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T03:47:21.93Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TryIt.aspx",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\TryIt.aspx",
-              "RelativeDocumentMoniker": "A5\\TryIt.aspx",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\TryIt.aspx",
-              "RelativeToolTip": "A5\\TryIt.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-18T03:46:46.302Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Staff.aspx.designer.cs",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Staff.aspx.designer.cs",
-              "RelativeDocumentMoniker": "A5\\Staff.aspx.designer.cs",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Staff.aspx.designer.cs",
-              "RelativeToolTip": "A5\\Staff.aspx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T03:35:04.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Staff.aspx",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Staff.aspx",
-              "RelativeDocumentMoniker": "A5\\Staff.aspx",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Staff.aspx",
-              "RelativeToolTip": "A5\\Staff.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-18T03:26:17.994Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Member.aspx.designer.cs",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Member.aspx.designer.cs",
-              "RelativeDocumentMoniker": "A5\\Member.aspx.designer.cs",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Member.aspx.designer.cs",
-              "RelativeToolTip": "A5\\Member.aspx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxkAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T02:44:54.883Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Web.config",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Web.config",
-              "RelativeDocumentMoniker": "A5\\Web.config",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Web.config",
-              "RelativeToolTip": "A5\\Web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwv0IAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-11-18T02:38:05.134Z",
+              "Title": "bootstrap.bundle.js",
+              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\A5\\Scripts\\bootstrap.bundle.js",
+              "RelativeDocumentMoniker": "A5\\Scripts\\bootstrap.bundle.js",
+              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\A5\\Scripts\\bootstrap.bundle.js",
+              "RelativeToolTip": "A5\\Scripts\\bootstrap.bundle.js",
+              "ViewState": "AgIAAPQYAAAAAAAAAAAAAA4ZAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-01T00:35:19.832Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "configuration91.svcinfo",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Connected Services\\RandoomStringService\\configuration91.svcinfo",
-              "RelativeDocumentMoniker": "A5\\Connected Services\\RandoomStringService\\configuration91.svcinfo",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Connected Services\\RandoomStringService\\configuration91.svcinfo",
-              "RelativeToolTip": "A5\\Connected Services\\RandoomStringService\\configuration91.svcinfo",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAAAFcAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-18T02:35:20.718Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Global.asax.cs",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Global.asax.cs",
-              "RelativeDocumentMoniker": "A5\\Global.asax.cs",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Global.asax.cs",
-              "RelativeToolTip": "A5\\Global.asax.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA+wC4AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T02:26:53.182Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Staff.aspx.cs",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Staff.aspx.cs",
-              "RelativeDocumentMoniker": "A5\\Staff.aspx.cs",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Staff.aspx.cs",
-              "RelativeToolTip": "A5\\Staff.aspx.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T02:20:13.034Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LoginControl.ascx.designer.cs",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\LoginControl.ascx.designer.cs",
-              "RelativeDocumentMoniker": "A5\\LoginControl.ascx.designer.cs",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\LoginControl.ascx.designer.cs",
-              "RelativeToolTip": "A5\\LoginControl.ascx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T02:20:10.127Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Default.aspx.designer.cs",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Default.aspx.designer.cs",
-              "RelativeDocumentMoniker": "A5\\Default.aspx.designer.cs",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Default.aspx.designer.cs",
-              "RelativeToolTip": "A5\\Default.aspx.designer.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAADwv0MAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T02:12:38.259Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Default.aspx.cs",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Default.aspx.cs",
-              "RelativeDocumentMoniker": "A5\\Default.aspx.cs",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Default.aspx.cs",
-              "RelativeToolTip": "A5\\Default.aspx.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAUwFoAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T02:12:11.163Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Default.aspx",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Default.aspx",
-              "RelativeDocumentMoniker": "A5\\Default.aspx",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Default.aspx",
-              "RelativeToolTip": "A5\\Default.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-18T02:11:43.678Z",
+              "Title": "LoginControl.ascx.cs",
+              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\A5\\LoginControl.ascx.cs",
+              "RelativeDocumentMoniker": "A5\\LoginControl.ascx.cs",
+              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\A5\\LoginControl.ascx.cs",
+              "RelativeToolTip": "A5\\LoginControl.ascx.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAADwv+gAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T23:37:09.731Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Member.aspx.cs",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Member.aspx.cs",
-              "RelativeDocumentMoniker": "A5\\Member.aspx.cs",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Member.aspx.cs",
-              "RelativeToolTip": "A5\\Member.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T01:46:46.272Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Login.aspx.cs",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Login.aspx.cs",
-              "RelativeDocumentMoniker": "A5\\Login.aspx.cs",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Login.aspx.cs",
-              "RelativeToolTip": "A5\\Login.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T00:52:22.684Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Login.aspx",
-              "RelativeDocumentMoniker": "A5\\Login.aspx",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Login.aspx",
-              "RelativeToolTip": "A5\\Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-18T00:52:11.601Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
               "Title": "LoginControl.ascx",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\LoginControl.ascx",
+              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\A5\\LoginControl.ascx",
               "RelativeDocumentMoniker": "A5\\LoginControl.ascx",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\LoginControl.ascx",
+              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\A5\\LoginControl.ascx",
               "RelativeToolTip": "A5\\LoginControl.ascx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2024-11-18T00:50:06.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginControl.ascx.cs",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\LoginControl.ascx.cs",
-              "RelativeDocumentMoniker": "A5\\LoginControl.ascx.cs",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\LoginControl.ascx.cs",
-              "RelativeToolTip": "A5\\LoginControl.ascx.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAuwJQAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T00:48:16.727Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Member.aspx",
-              "DocumentMoniker": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Member.aspx",
-              "RelativeDocumentMoniker": "A5\\Member.aspx",
-              "ToolTip": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A5\\A5\\Member.aspx",
-              "RelativeToolTip": "A5\\Member.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-17T07:47:16.154Z"
+              "WhenOpened": "2024-11-30T23:37:06.63Z",
+              "EditorCaption": ""
             }
           ]
         }

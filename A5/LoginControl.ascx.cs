@@ -3,55 +3,115 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing.Printing;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Web.Security;
 using System.Web.Services.Description;
 using System.Web.UI;
+using System.Xml.Serialization;
+using WebGrease.Extensions;
 
 
 namespace A5
 {
-    //public class User
-    //{
-    //    public string username { get; }
-    //    public string password { get; }
-    //    public int role { get; }
-    //    public User(string username, string password, int role)
-    //    {
-    //        this.username = username;
-    //        this.password = password;
-    //        this.role = role;
-    //    }
-    //}
+    [Serializable]
+    public class Account
+    {
+        public string username { get; set; }
+        public string enc_password { get; set; }
+        public int role { get; set; }
+        public Account() 
+        {
+        }
+        public Account(string username, string enc_password, int role)
+        {
+            this.username = username;
+            this.enc_password = enc_password;
+            this.role = role;
+        }
+    }
+
+    [Serializable]
+    public class AccountEntry
+    {
+        [XmlAttribute("Username")]
+        public string Username { get; set; }
+
+        [XmlElement("Account")]
+        public Account Account { get; set; }
+    }
+
+    [Serializable]
+    [XmlRoot("Accounts")]
+    public class AccountList
+    {
+        [XmlElement("AccountEntry")]
+        public List<AccountEntry> AccountEntries { get; set; }
+
+        [XmlIgnore]
+        public Dictionary<string, Account> AccountsDictionary
+        {
+            get
+            {
+                return AccountEntries?.ToDictionary(entry => entry.Username, entry => entry.Account);
+            }
+            set
+            {
+                AccountEntries = value?.Select(kvp => new AccountEntry { Username = kvp.Key, Account = kvp.Value }).ToList();
+            }
+        }
+    }
+
     public partial class LoginControl : System.Web.UI.UserControl
     {
         private RandoomStringService.ServiceClient rsclient;
         private string rstring;
 
-        Dictionary<string, List<string>> users;
+        private string logFilePath;
+        private string accountFilePath;
+
+        AccountList accountList;
+
+
+        //Dictionary<string, List<string>> users;
+        Dictionary<string, Account> accounts;
+
+        public LoginControl()
+        {
+            string root = AppDomain.CurrentDomain.BaseDirectory;
+            accountFilePath = root + "Accounts.xml";
+            logFilePath = root + "log.log";
+            rsclient = new RandoomStringService.ServiceClient();
+        }
 
         public void Page_Init()
         {
+            accountFilePath = Server.MapPath("Accounts.xml");
+            logFilePath = Server.MapPath("log.log");
             if (rsclient == null)
             {
                 rsclient = new RandoomStringService.ServiceClient();
             }
-            users = new Dictionary<string, List<string>>();
-            users["admin"] = new List<string> { "123", "1" };
-            users["user"] = new List<string> { "123", "2" };
-            users["TA"] = new List<string> { "Cse445", "1" };
-            users["member"] = new List<string> { "123", "2" };
+            //users = new Dictionary<string, List<string>>();
+            //users["admin"] = new List<string> { "123", "1" };
+            //users["user"] = new List<string> { "123", "2" };
+            //users["TA"] = new List<string> { "Cse445", "1" };
+            //users["member"] = new List<string> { "123", "2" };
 
             // Check if user.xml exists
-            if (!File.Exists(Server.MapPath("user.xml")))
+            if (!File.Exists(accountFilePath))
             {
                 // Create user.xml
-                File.Create(Server.MapPath("user.xml")).Close();
+                File.Create(accountFilePath).Close();
+                Init_User_Xml();
             }
+            Read_User_Xml();
+            //addAccount("admin111", "123123", 1);
 
         }
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -64,8 +124,6 @@ namespace A5
                 Session["RandomString"] = rstring;
                 lblRString.Text = rstring;
             }
-
-
         }
         protected void Page_Unload(object sender, EventArgs e)
         {
@@ -156,10 +214,11 @@ namespace A5
 
         public bool ValidateUser(string username, string password)
         {
-            if (users.ContainsKey(username))
+            if (accounts.ContainsKey(username))
             {
-                List<string> user = users[username];
-                if (user[0] == password)
+                string enc = PasswordEncrypt(password);
+                Account user = accounts[username];
+                if (user.enc_password == enc)
                 {
                     return true;
                 }
@@ -167,22 +226,126 @@ namespace A5
             return false;
         }
 
+        /// <summary>
+        /// get user role by username
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns>1 for staff,2 for member, 0 for error</returns>
         public int GetUserRole(string username) //get by name
         {
-            if (users.ContainsKey(username))
+            if (accounts.ContainsKey(username))
             {
-                List<string> user = users[username];
-                return int.Parse(user[1]);
+                Account user = accounts[username];
+                return user.role;
             }
             return 0; // Return 0 if user not found
         }
 
+        private void Init_User_Xml()
+        {
+            this.accountList = new AccountList
+            {
+                AccountsDictionary = new Dictionary<string, Account>
+                {
+                    { "admin", new Account("admin", "123", 1) },
+                    { "user", new Account("user", "123", 2) },
+                    { "TA", new Account("TA", "Cse445", 1) },
+                    { "member", new Account("member", "123", 2) }
+                }
+            };
+            Save_User_Xml(accountList, accountFilePath);
+        }
 
+        public static void Save_User_Xml(AccountList accountList,string path )
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(AccountList));
+            using (TextWriter writer = new StreamWriter(path))
+            {
+                serializer.Serialize(writer, accountList);
+            }
+        }
+
+        /// <summary>
+        /// Add account to the account list
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <param name="role"></param>
+        /// <returns>1 for succssed, 0 for known user</returns>
+        public int addAccount(string username, string password, int role)
+        {
+            
+            if (accounts.ContainsKey(username))
+            {
+                return 0;
+            }
+            Account account = new Account(username, PasswordEncrypt(password), role);
+            accountList.AccountEntries.Add(new AccountEntry { Username = username, Account = account });
+            Save_User_Xml(accountList, accountFilePath);
+
+            //foreach (var kvp in accountList.AccountsDictionary)
+            //{
+            //    using (StreamWriter writer = new StreamWriter(logFilePath, true))
+            //    {
+            //        Console.SetOut(writer);
+            //        Console.WriteLine("new dict.");
+            //        Console.WriteLine($"Username: {kvp.Key}, Role: {kvp.Value.role}");
+            //        writer.Flush();
+            //    }
+            //}
+
+            return 1;
+        }
+
+        /// <summary>
+        /// delete account from the account list
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns>1 for succssed, 0 for unknown user</returns>
+        public int removeAccount(string username)
+        {
+            if (accounts.ContainsKey(username))
+            {
+                accountList.AccountEntries.RemoveAll(entry => entry.Username == username);
+                Save_User_Xml(accountList, accountFilePath);
+                return 1;
+            }
+            return 0;
+        }
+
+        private void Read_User_Xml()
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(AccountList));
+            using (TextReader reader = new StreamReader(accountFilePath))
+            {
+                this.accountList = (AccountList)serializer.Deserialize(reader);
+                accounts = accountList.AccountsDictionary;
+
+                //foreach (var kvp in accounts)
+                //{
+                //    using (StreamWriter writer = new StreamWriter(logFilePath, true))
+                //    {
+                //        Console.SetOut(writer);
+                //        Console.WriteLine("This is a log message." + AppDomain.CurrentDomain.BaseDirectory);
+                //        Console.WriteLine($"Username: {kvp.Key}, Role: {kvp.Value.role}");
+                //        writer.Flush();
+                //    }
+                //}
+            }
+        }
 
         //public int GetUserRole(User user) //get by User
         //{
         //    return user.role;
         //}
+        public static string PasswordEncrypt(string password)
+        {
+            //byte[] data = System.Text.Encoding.ASCII.GetBytes(password);
+            //data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
+            //String hash = System.Text.Encoding.ASCII.GetString(data);
+            string hash = password;
+            return hash;
+        }
 
         public static void RedirectUser(int role, HttpResponse response)
         {
@@ -199,6 +362,7 @@ namespace A5
                     break;
             }
         }
+
 
     }
 }
