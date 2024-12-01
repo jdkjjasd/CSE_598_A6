@@ -19,7 +19,6 @@
             <asp:Button ID="btnStaff" runat="server" Text="Staff" OnClick="btnStaff_Click" />
             <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
             <asp:Button ID="btnTryit" runat="server" Text="Try It" OnClick="btnTryit_Click" />
-
         </div>
     </form>
 </body>

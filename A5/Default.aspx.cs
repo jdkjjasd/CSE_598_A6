@@ -64,6 +64,7 @@ namespace A5
             }
         }
 
+
         protected void btnStaff_Click(object sender, EventArgs e)
         {
             // Redirect to staff page, check if user is logged in and has staff role

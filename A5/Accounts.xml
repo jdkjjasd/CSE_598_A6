@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Accounts xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <AccountEntry Username="admin">
-    <Account>
-      <username>admin</username>
-      <enc_password>123</enc_password>
-      <role>1</role>
-    </Account>
-  </AccountEntry>
   <AccountEntry Username="user">
     <Account>
       <username>user</username>
@@ -28,11 +21,18 @@
       <role>2</role>
     </Account>
   </AccountEntry>
-  <AccountEntry Username="staff">
+  <AccountEntry Username="admin">
     <Account>
-      <username>staff</username>
-      <enc_password>staff</enc_password>
+      <username>admin</username>
+      <enc_password>123</enc_password>
       <role>1</role>
+    </Account>
+  </AccountEntry>
+  <AccountEntry Username="temp">
+    <Account>
+      <username>temp</username>
+      <enc_password>temp</enc_password>
+      <role>2</role>
     </Account>
   </AccountEntry>
 </Accounts>

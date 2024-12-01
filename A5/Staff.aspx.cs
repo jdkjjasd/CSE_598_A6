@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace A5
 {
@@ -26,6 +29,10 @@ namespace A5
             }
 
             //LoginControl.Instance.addAccount("staff", "staff", 1); // example of adding a staff account
+            if (!IsPostBack)
+            {
+                BindAccountGrid();
+            }
 
 
         }
@@ -34,5 +41,92 @@ namespace A5
         {
             Response.Redirect("~/Default.aspx");
         }
+
+        private void BindAccountGrid()
+        {
+            var accountList = LoginControl.Instance.accounts.Values.Select(account => new
+            {
+                username = account.username,
+                enc_password = account.enc_password,
+                role = account.role == 1 ? "Staff" : account.role == 2 ? "Member" : "Unknown"
+            }).ToList();
+
+            gvAccounts.DataSource = accountList;
+            gvAccounts.DataBind();
+        }
+        protected void gvAccounts_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            string username = gvAccounts.DataKeys[e.RowIndex].Value.ToString();
+            int result = LoginControl.Instance.removeAccount(username);
+
+            if (result == 1)
+            {
+                lblMessage.Text = $"Account '{username}' deleted successfully.";
+            }
+            else
+            {
+                lblMessage.Text = $"Account '{username}' not found.";
+            }
+
+            BindAccountGrid();
+
+        }
+
+
+        protected void btnAddAccount_Click(object sender, EventArgs e)
+        {
+            string username = txtNewUsername.Text.Trim();
+            string password = txtNewPassword.Text;
+            string reEnterPassword = txtReEnterPassword.Text;
+            int role = int.Parse(ddlRole.SelectedValue);
+
+            
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(reEnterPassword))
+            {
+                lblMessage.Text = "All fields are required.";
+                return;
+            }
+
+            if (password != reEnterPassword)
+            {
+                lblMessage.Text = "Passwords do not match.";
+                return;
+            }
+
+            if (role == 0)
+            {
+                lblMessage.Text = "Please select a valid role.";
+                return;
+            }
+
+            // addAccount
+            int result = LoginControl.Instance.addAccount(username, password, role);
+            if (result == 1)
+            {
+                lblMessage.Text = "Account added successfully.";
+                
+                txtNewUsername.Text = string.Empty;
+                txtNewPassword.Text = string.Empty;
+                txtReEnterPassword.Text = string.Empty;
+                ddlRole.SelectedIndex = 0;
+
+                
+                BindAccountGrid();
+            }
+            else
+            {
+                lblMessage.Text = "Username already exists.";
+            }
+        }
+
+
+
+
+
+
+
+
+
+
     }
 }

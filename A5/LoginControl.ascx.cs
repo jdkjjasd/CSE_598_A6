@@ -79,7 +79,7 @@ namespace A5
 
 
         //Dictionary<string, List<string>> users;
-        Dictionary<string, Account> accounts;
+        public Dictionary<string, Account> accounts;
 
         public LoginControl()
         {
@@ -98,8 +98,8 @@ namespace A5
 
         public void Page_Init()
         {
-            accountFilePath = Server.MapPath("Accounts.xml");
-            logFilePath = Server.MapPath("log.log");
+            //accountFilePath = Server.MapPath("Accounts.xml");
+            //logFilePath = Server.MapPath("log.log");
             if (rsclient == null)
             {
                 rsclient = new RandoomStringService.ServiceClient();
@@ -193,7 +193,47 @@ namespace A5
             logOut();
         }
 
-        public void logOut()
+        protected void btnSignUp_Click(object sender, EventArgs e)
+        {
+            string username = txtSignUpUsername.Text.Trim();
+            string password = txtSignUpPassword.Text;
+            string rePassword = txtSignUpRePassword.Text;
+
+            // 验证输入
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(rePassword))
+            {
+                lblSignUpMessage.Text = "All fields are required.";
+                lblSignUpMessage.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+
+            if (password != rePassword)
+            {
+                lblSignUpMessage.Text = "Passwords do not match.";
+                lblSignUpMessage.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+
+            int result = addAccount(username, password, 2);
+
+            if (result == 1)
+            {
+                lblSignUpMessage.Text = "Sign up successful!";
+                lblSignUpMessage.ForeColor = System.Drawing.Color.Green;
+
+                // 清空输入框
+                txtSignUpUsername.Text = string.Empty;
+                txtSignUpPassword.Text = string.Empty;
+                txtSignUpRePassword.Text = string.Empty;
+            }
+            else
+            {
+                lblSignUpMessage.Text = "Username already exists.";
+                lblSignUpMessage.ForeColor = System.Drawing.Color.Red;
+            }
+        }
+
+            public void logOut()
         {
             // Clear authentication ticket and set user as logged out
             //FormsAuthentication.SignOut();
