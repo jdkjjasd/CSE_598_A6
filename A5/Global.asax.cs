@@ -36,18 +36,23 @@ namespace A5
 
         public static string get_user()
         {
-            return userCookie["Username"];
+            if (HttpContext.Current.Request.Cookies["UserProfile"] != null)
+            {
+                return HttpContext.Current.Request.Cookies["UserProfile"]["Username"];
+            }
+            return null;
         }
         public static int get_role()
         {
-            try 
+            if (HttpContext.Current.Request.Cookies["UserProfile"] != null)
             {
-                return int.Parse(userCookie["Role"]);
+                int role;
+                if (int.TryParse(HttpContext.Current.Request.Cookies["UserProfile"]["Role"], out role))
+                {
+                    return role;
+                }
             }
-            catch (Exception e)
-            {
-                return 0;
-            }
+            return 0; // Default to guest role
 
         }
 
@@ -64,7 +69,7 @@ namespace A5
 
         void Application_Start(object sender, EventArgs e)
         {
-            
+
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }

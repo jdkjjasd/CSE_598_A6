@@ -35,6 +35,9 @@ namespace A5
 
         protected global::System.Web.UI.WebControls.Label lblMessage;
         protected global::System.Web.UI.WebControls.Label lblWelcome;
+        protected global::System.Web.UI.WebControls.TextBox txtZipCode;
+
+        protected global::System.Web.UI.WebControls.Label lblWeatherForecast;
     }
 }
 

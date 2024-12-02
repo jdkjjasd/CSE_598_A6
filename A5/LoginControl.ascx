@@ -12,6 +12,7 @@
     <br />
     <asp:Button ID="btnNewString" runat="server" Text="New String" OnClick="btnNewString_Click" />
     <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
+    <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
     <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
 </asp:Panel>
 

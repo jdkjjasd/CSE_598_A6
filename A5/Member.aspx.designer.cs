@@ -28,5 +28,7 @@ namespace A5
         protected global::System.Web.UI.WebControls.TextBox txtReminder;
         protected global::System.Web.UI.WebControls.Button btnAddMemo;
         protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.TextBox txtZipCode;
+        protected global::System.Web.UI.WebControls.Label lblWeatherForecast;
     }
 }

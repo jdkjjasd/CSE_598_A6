@@ -11,7 +11,7 @@ namespace A5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             if (Global.get_user() != null)
             {
                 // If user is logged in, display logout button
@@ -43,7 +43,7 @@ namespace A5
             else
             {
                 // If user is not logged in, display login button
-                message = "Not login";
+                message = "Not logged in";
                 //btnLogout.Visible = false;
             }
 

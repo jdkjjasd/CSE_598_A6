@@ -194,7 +194,7 @@ namespace A5
             string inputRString = txtRString.Text;
             string targetRString = Session["RandomString"] as string;
 
-            
+
 
             if (!ValidateCaptcha(inputRString, targetRString))
             {
@@ -214,9 +214,6 @@ namespace A5
                 RedirectUser(role, Response);
             }
 
-            
-
-
         }
 
         public int Login(string username, string password)
@@ -233,6 +230,8 @@ namespace A5
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             logOut();
+            // Redirect user again, just in case
+            Response.Redirect("~/Default.aspx", true);
         }
 
         protected void btnSignUp_Click(object sender, EventArgs e)
@@ -285,13 +284,25 @@ namespace A5
             }
         }
 
-            public void logOut()
+        public void logOut()
         {
             // Clear authentication ticket and set user as logged out
-            //FormsAuthentication.SignOut();
             Global.logout();
-            // Redirect to login page
-            //Response.Redirect("~/Login.aspx");
+
+            // Clear cookies
+            if (HttpContext.Current.Request.Cookies["UserProfile"] != null)
+            {
+                HttpCookie userCookie = new HttpCookie("UserProfile");
+                userCookie.Expires = DateTime.Now.AddDays(-1); // Expire the cookie immediately
+                HttpContext.Current.Response.Cookies.Add(userCookie);
+            }
+
+            // Clear session
+            HttpContext.Current.Session.Clear();
+            HttpContext.Current.Session.Abandon();
+
+            // Redirect to the default or login page
+            HttpContext.Current.Response.Redirect("~/Default.aspx");
         }
 
         public bool ValidateCaptcha(string response, string targetstring)
@@ -349,7 +360,7 @@ namespace A5
             Save_User_Xml(accountList, accountFilePath);
         }
 
-        public static void Save_User_Xml(AccountList accountList,string path )
+        public static void Save_User_Xml(AccountList accountList, string path)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(AccountList));
             using (TextWriter writer = new StreamWriter(path))
@@ -367,7 +378,7 @@ namespace A5
         /// <returns>1 for succssed, 0 for known user</returns>
         public int addAccount(string username, string password, int role)
         {
-            
+
             if (accounts.ContainsKey(username))
             {
                 return 0;
@@ -424,7 +435,7 @@ namespace A5
             if (accounts.ContainsKey(username))
             {
                 var account = accounts[username];
-                int newKey = account.Memos.Keys.Any() ? account.Memos.Keys.Max() + 1 : 1; 
+                int newKey = account.Memos.Keys.Any() ? account.Memos.Keys.Max() + 1 : 1;
                 account.Memos[newKey] = new Memo { Timestamp = timestamp, Reminder = reminder };
                 Save_User_Xml(accountList, accountFilePath);
                 Read_User_Xml();

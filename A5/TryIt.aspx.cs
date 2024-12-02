@@ -37,7 +37,7 @@ namespace A5
             //loginControl = LoginControl.Instance;
             //loginControl.Page_Init();
 
-            if (!loginControl.ValidateCaptcha(inputRString,targetRString))
+            if (!loginControl.ValidateCaptcha(inputRString, targetRString))
             {
                 lblMessage.Text = "Invalid random string.";
                 return;
@@ -52,7 +52,7 @@ namespace A5
             else
             {
                 lblMessage.Text = "Login successful!";
-                LoginControl.RedirectUser(role,Response);
+                LoginControl.RedirectUser(role, Response);
             }
         }
 
@@ -71,6 +71,30 @@ namespace A5
             string rstring = loginControl.newString();
             Session["RandomString"] = rstring;
             lblRString.Text = Session["RandomString"].ToString();
+        }
+
+        protected void btnFetchWeather_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string zipCode = txtZipCode.Text.Trim();
+                if (string.IsNullOrEmpty(zipCode))
+                {
+                    lblWeatherForecast.Text = "Please enter a valid ZIP Code.";
+                    return;
+                }
+
+                // Call the Weather5day method
+                WeatherService weatherService = new WeatherService();
+                string[] forecast = weatherService.Weather5day(zipCode);
+
+                // Display the forecast
+                lblWeatherForecast.Text = string.Join("<br />", forecast);
+            }
+            catch (Exception ex)
+            {
+                lblWeatherForecast.Text = "Error: " + ex.Message;
+            }
         }
     }
 }
