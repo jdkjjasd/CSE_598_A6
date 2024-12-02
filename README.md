@@ -1,13 +1,18 @@
 # ASU CSE-445-598 Assignment 6 Team Project
 
-* ## Members:
+# WebStar Link:
++ `http://webstrar104.fulton.asu.edu/page0/Default.aspx`
+
+## Members
+
 | Name           | Work Percentage |
 |----------------|------------------|
-| Mcquitty, Drake|                  |
-| Mehta, Gautam  |                  |
-| Sun, Max       |                  |
+| Mcquitty, Drake| 10%             |
+| Mehta, Gautam  | 45%             |
+| Sun, Max       | 45%             |
 
-* ## Components Summary
+## Components Summary
+
 | Task                | Completed By                           | Description                                                                 |
 |---------------------|----------------------------------------|-----------------------------------------------------------------------------|
 | User Control        | Sun, Max                               | Log in page and authentication verification with fake captcha by ASU random string service |
@@ -16,14 +21,14 @@
 | WebStar Deployed    | Mcquitty, Drake                        | Deployed IIS Service                                                        |
 | XML                 | Sun, Max                               | Store account info                                                          |
 | Staff Page          | Sun, Max                               | Account management                                                          |
-| Member Page         | Sun, Max                               |                                                                             |
-| TryIt Page          | Mcquitty, Drake, Sun, Max              |                                                                             |
-| Documentation       | Sun, Max                               |                                                                             |
-| Integrated          | Sun, Max, Mcquitty, Drake, Mehta, Gautam |                                                                             |
-| Project Management  | Sun, Max                               |                                                                             |
-| Local Host Testing  | Sun, Max                               |                                                                             |
-| WebStar Testing     | Mcquitty, Drake                        |                                                                             |
-
+| Member Page         | Sun, Max                               | Add a basic memo system, member can add, check, and delete memos. All memos stored in XML |
+| TryIt Page          | Mcquitty, Drake, Sun, Max              | To test login function and weather service                                  |
+| Documentation       | Sun, Max                               | Maintenance                                                                 |
+| Integrated          | Sun, Max, Mcquitty, Drake              | Integrate all components to work together                                   |
+| Project Management  | Sun, Max                               | Trace the project process                                                   |
+| Local Host Testing  | Sun, Max                               | Make sure everything works well in local host                               |
+| WebStar Testing     | Mcquitty, Drake                        | Make sure everything works well in WebStar                                  |
+| Project Submit      | Mcquitty, Drake                        | Submit to Canvas                                                            |
 
 
 ---

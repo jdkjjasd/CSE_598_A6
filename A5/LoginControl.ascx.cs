@@ -12,6 +12,7 @@ using System.Web.Services.Description;
 using System.Web.UI;
 using System.Xml.Serialization;
 using WebGrease.Extensions;
+using PasswordHasher;
 
 
 namespace A5
@@ -340,10 +341,10 @@ namespace A5
             {
                 AccountsDictionary = new Dictionary<string, Account>
                 {
-                    { "admin", new Account("admin", "123", 1) },
-                    { "user", new Account("user", "123", 2) },
-                    { "TA", new Account("TA", "Cse445", 1) },
-                    { "member", new Account("member", "123", 2) }
+                    { "admin", new Account("admin", PasswordEncrypt("123"), 1) },
+                    { "user", new Account("user", PasswordEncrypt("123"), 2) },
+                    { "TA", new Account("TA", PasswordEncrypt("Cse445"), 1) },
+                    { "member", new Account("member",PasswordEncrypt( "123"), 2) }
                 }
             };
             Save_User_Xml(accountList, accountFilePath);
@@ -484,7 +485,9 @@ namespace A5
             //byte[] data = System.Text.Encoding.ASCII.GetBytes(password);
             //data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
             //String hash = System.Text.Encoding.ASCII.GetString(data);
-            string hash = password;
+            string hash = Hasher.HashPassword(password);
+
+            //string hash = password;
             return hash;
         }
 
