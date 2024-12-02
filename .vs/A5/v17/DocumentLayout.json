@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\",
+  "WorkspaceRootPath": "C:\\Users\\drake\\Desktop\\CSE445\\updatedcode\\CSE_598_A6\\",
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\a5\\logincontrol.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,20 +51,20 @@
       "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\a5\\default.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\default.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|c:\\users\\drake\\desktop\\cse445\\updatedcode\\cse_598_a6\\a5\\tryit.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\tryit.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\a5\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|c:\\users\\drake\\desktop\\cse445\\updatedcode\\cse_598_a6\\a5\\tryit.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\tryit.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\a5\\scripts\\bootstrap.bundle.js.map||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\scripts\\bootstrap.bundle.js.map||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|c:\\users\\drake\\desktop\\cse445\\updatedcode\\cse_598_a6\\a5\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|F:\\\u4F5C\u4E1A\\ASU\\CSE 598\\A6\\a5\\staff.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\staff.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|c:\\users\\drake\\desktop\\cse445\\updatedcode\\cse_598_a6\\a5\\weatherservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2351DA2B-E754-4118-8BE0-C28CF1C4ED24}|A5\\A5.csproj|solutionrelative:a5\\weatherservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -111,7 +111,8 @@
               "RelativeToolTip": "A5\\Member.aspx.designer.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAADwvx0AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T23:52:21.633Z"
+              "WhenOpened": "2024-12-02T03:59:09.892Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

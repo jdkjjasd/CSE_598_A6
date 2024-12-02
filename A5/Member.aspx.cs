@@ -26,10 +26,10 @@ namespace A5
             {
                 Response.Redirect("~/Default.aspx");
             }
-            if (!IsPostBack) 
+            if (!IsPostBack)
             {
-                LoginControl.Instance.Read_User_Xml(); 
-                BindMemoGrid(); 
+                LoginControl.Instance.Read_User_Xml();
+                BindMemoGrid();
             }
         }
         protected void gvMemos_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -37,13 +37,13 @@ namespace A5
             if (e.CommandName == "DeleteMemo")
             {
                 string username = lblUsername.Text;
-                int rowIndex = Convert.ToInt32(e.CommandArgument); 
-                int memoId = (int)gvMemos.DataKeys[rowIndex].Value; 
+                int rowIndex = Convert.ToInt32(e.CommandArgument);
+                int memoId = (int)gvMemos.DataKeys[rowIndex].Value;
 
                 if (LoginControl.Instance.accounts.ContainsKey(username))
                 {
-                    LoginControl.Instance.RemoveMemo(username, memoId); 
-                    BindMemoGrid(); 
+                    LoginControl.Instance.RemoveMemo(username, memoId);
+                    BindMemoGrid();
                 }
             }
         }
@@ -98,6 +98,30 @@ namespace A5
         protected void btnBack_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Default.aspx");
+        }
+
+        protected void btnFetchWeather_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string zipCode = txtZipCode.Text.Trim();
+                if (string.IsNullOrEmpty(zipCode))
+                {
+                    lblWeatherForecast.Text = "Please enter a valid ZIP Code.";
+                    return;
+                }
+
+                // Call the Weather5day method
+                WeatherService weatherService = new WeatherService();
+                string[] forecast = weatherService.Weather5day(zipCode);
+
+                // Display the forecast
+                lblWeatherForecast.Text = string.Join("<br />", forecast);
+            }
+            catch (Exception ex)
+            {
+                lblWeatherForecast.Text = "Error: " + ex.Message;
+            }
         }
     }
 }

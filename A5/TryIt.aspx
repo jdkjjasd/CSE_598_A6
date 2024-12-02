@@ -29,8 +29,13 @@
             <br />
             <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
             <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
+            <h2>Weather Service</h2>
+            <p>Enter a Zip Code</p>
+            <asp:TextBox ID="txtZipCode" runat="server" placeholder="ZIP Code"></asp:TextBox>
+            <asp:Button ID="btnFetchWeather" runat="server" Text="Get Forecast" OnClick="btnFetchWeather_Click" />
             <br />
             <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
+            <asp:Label ID="lblWeatherForecast" runat="server" Text=""></asp:Label>
         </div>
     </form>
 </body>
