@@ -112,5 +112,12 @@ namespace A5
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.TextBox txtSignUpUsername;
+        protected global::System.Web.UI.WebControls.TextBox txtSignUpPassword;
+        protected global::System.Web.UI.WebControls.TextBox txtSignUpRePassword;
+        protected global::System.Web.UI.WebControls.Label lblSignUpMessage;
+        protected global::System.Web.UI.WebControls.Label lblRString1;
+        protected global::System.Web.UI.WebControls.TextBox txtRString1;
+        protected global::System.Web.UI.WebControls.Button btnNewString1;
     }
 }

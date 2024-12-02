@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <h2>Please log in</h2>
+            <h2>please log in</h2>
             <uc:LoginControl ID="LoginControl1" runat="server" />
         </div>
     </form>

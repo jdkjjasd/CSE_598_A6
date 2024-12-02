@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Accounts xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AccountEntry Username="admin">
+    <Account>
+      <username>admin</username>
+      <enc_password>123</enc_password>
+      <role>1</role>
+      <Memos />
+    </Account>
+  </AccountEntry>
+  <AccountEntry Username="user">
+    <Account>
+      <username>user</username>
+      <enc_password>123</enc_password>
+      <role>2</role>
+      <Memos />
+    </Account>
+  </AccountEntry>
+  <AccountEntry Username="TA">
+    <Account>
+      <username>TA</username>
+      <enc_password>Cse445</enc_password>
+      <role>1</role>
+      <Memos />
+    </Account>
+  </AccountEntry>
+  <AccountEntry Username="member">
+    <Account>
+      <username>member</username>
+      <enc_password>123</enc_password>
+      <role>2</role>
+      <Memos />
+    </Account>
+  </AccountEntry>
+  <AccountEntry Username="111">
+    <Account>
+      <username>111</username>
+      <enc_password>111</enc_password>
+      <role>2</role>
+      <Memos />
+    </Account>
+  </AccountEntry>
+</Accounts>

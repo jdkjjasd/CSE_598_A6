@@ -24,5 +24,13 @@ namespace A5
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         protected global::System.Web.UI.WebControls.Label lblStaffName;
         protected global::System.Web.UI.WebControls.Button btnBack;
+        protected global::System.Web.UI.WebControls.GridView gvAccounts;
+        protected global::System.Web.UI.WebControls.LinkButton btnDelete;
+        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.TextBox txtNewUsername;
+        protected global::System.Web.UI.WebControls.TextBox txtNewPassword;
+        protected global::System.Web.UI.WebControls.TextBox txtReEnterPassword;
+        protected global::System.Web.UI.WebControls.DropDownList ddlRole;
+        protected global::System.Web.UI.WebControls.Button btnAddAccount;
     }
 }

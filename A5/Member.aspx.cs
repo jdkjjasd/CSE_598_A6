@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Linq;
 using System.Web;
 using System.Web.UI;
-using A5;
+using System.Web.UI.WebControls;
 
 namespace A5
 {
@@ -24,6 +25,73 @@ namespace A5
             else
             {
                 Response.Redirect("~/Default.aspx");
+            }
+            if (!IsPostBack) 
+            {
+                LoginControl.Instance.Read_User_Xml(); 
+                BindMemoGrid(); 
+            }
+        }
+        protected void gvMemos_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "DeleteMemo")
+            {
+                string username = lblUsername.Text;
+                int rowIndex = Convert.ToInt32(e.CommandArgument); 
+                int memoId = (int)gvMemos.DataKeys[rowIndex].Value; 
+
+                if (LoginControl.Instance.accounts.ContainsKey(username))
+                {
+                    LoginControl.Instance.RemoveMemo(username, memoId); 
+                    BindMemoGrid(); 
+                }
+            }
+        }
+
+        private void BindMemoGrid()
+        {
+            string username = Global.get_user();
+            var memos = LoginControl.Instance.GetMemos(username); // 使用 GetMemos 方法获取用户的 Memos
+
+            if (memos != null)
+            {
+                gvMemos.DataSource = memos
+                    .OrderByDescending(kvp => DateTime.TryParseExact(kvp.Value.Timestamp, "yyyyMMddHHmmss", null, System.Globalization.DateTimeStyles.None, out var parsedDate)
+                                                  ? parsedDate
+                                                  : DateTime.MinValue) // 按时间戳降序排序
+                    .Select(kvp => new
+                    {
+                        Key = kvp.Key, // Memo ID
+                        Timestamp = DateTime.TryParseExact(kvp.Value.Timestamp, "yyyyMMddHHmmss", null, System.Globalization.DateTimeStyles.None, out var parsedDate)
+                                    ? parsedDate.ToString("yyyy-MM-dd HH:mm:ss") // 格式化时间戳
+                                    : kvp.Value.Timestamp,
+                        Reminder = kvp.Value.Reminder
+                    })
+                    .ToList();
+
+                gvMemos.DataBind();
+            }
+        }
+
+        protected void btnAddMemo_Click(object sender, EventArgs e)
+        {
+            string username = lblUsername.Text;
+            if (!string.IsNullOrEmpty(username) && LoginControl.Instance.accounts.ContainsKey(username))
+            {
+                string reminder = txtReminder.Text.Trim();
+
+                if (!string.IsNullOrEmpty(reminder))
+                {
+                    string timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+
+                    LoginControl.Instance.AddMemo(username, timestamp, reminder);
+                    txtReminder.Text = string.Empty;
+                    BindMemoGrid();
+                }
+                else
+                {
+                    lblMessage.Text = "Reminder cannot be empty.";
+                }
             }
         }
 
