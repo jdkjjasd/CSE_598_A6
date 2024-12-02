@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Optimization;
@@ -11,27 +12,54 @@ namespace A5
 {
     public class Global : HttpApplication
     {
-        static String username;
-        static int role;
+        //static String username;
+        //static int role;
+        static HttpCookie userCookie;
+
+        public Global()
+        {
+            userCookie = new HttpCookie("UserProfile");
+        }
+
+
         public static void set_user(string username, int role)
         {
-            Global.username = username;
-            Global.role = role;
+            //Global.username = username;
+            //Global.role = role;
+
+            //HttpCookie userCookie = new HttpCookie("UserProfile");
+            userCookie["Username"] = username;
+            userCookie["Role"] = role.ToString();
+            userCookie.Expires = DateTime.Now.AddMinutes(30); // Expiration time for the cookie
+            HttpContext.Current.Response.Cookies.Add(userCookie);
         }
 
         public static string get_user()
         {
-            return Global.username;
+            return userCookie["Username"];
         }
         public static int get_role()
         {
-            return Global.role;
+            try 
+            {
+                return int.Parse(userCookie["Role"]);
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
         }
 
         public static void logout()
         {
-            Global.username = null;
-            Global.role = 0;
+            // Clear the cookie
+            if (HttpContext.Current.Request.Cookies["UserProfile"] != null)
+            {
+                HttpCookie userCookie = new HttpCookie("UserProfile");
+                userCookie.Expires = DateTime.Now.AddDays(-1); // Expire the cookie immediately
+                HttpContext.Current.Response.Cookies.Add(userCookie);
+            }
         }
 
         void Application_Start(object sender, EventArgs e)
@@ -43,8 +71,15 @@ namespace A5
 
         void Session_Start(object sender, EventArgs e)
         {
-            // Call logout here if needed
-            logout();
+            // Initialize the session and check for a valid cookie
+            if (HttpContext.Current.Request.Cookies["UserProfile"] != null)
+            {
+                HttpCookie userCookie = HttpContext.Current.Request.Cookies["UserProfile"];
+            }
+            else
+            {
+                logout(); // Ensure a clean session if no cookie exists
+            }
         }
     }
 }

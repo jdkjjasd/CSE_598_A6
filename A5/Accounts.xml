@@ -37,7 +37,23 @@
       <username>111</username>
       <enc_password>111</enc_password>
       <role>2</role>
-      <Memos />
+      <Memos>
+        <MemoEntry Key="1">
+          <Memo Timestamp="20241201180011">
+            <Reminder>2</Reminder>
+          </Memo>
+        </MemoEntry>
+        <MemoEntry Key="2">
+          <Memo Timestamp="20241201180012">
+            <Reminder>4</Reminder>
+          </Memo>
+        </MemoEntry>
+        <MemoEntry Key="3">
+          <Memo Timestamp="20241201180012">
+            <Reminder>5</Reminder>
+          </Memo>
+        </MemoEntry>
+      </Memos>
     </Account>
   </AccountEntry>
 </Accounts>
