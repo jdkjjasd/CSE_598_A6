@@ -46,11 +46,27 @@
     </table>
 </asp:Panel>
     <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
-    <asp:GridView ID="gvAccounts" runat="server" AutoGenerateColumns="False" CssClass="table" OnRowDeleting="gvAccounts_RowDeleting" DataKeyNames="Username">
+<asp:GridView ID="gvAccounts" runat="server" AutoGenerateColumns="False" CssClass="table" 
+    OnRowDeleting="gvAccounts_RowDeleting" DataKeyNames="Username" 
+    OnRowCommand="gvAccounts_RowCommand">
     <Columns>
         <asp:BoundField DataField="username" HeaderText="Username" />
         <asp:BoundField DataField="enc_password" HeaderText="Encrypted Password" />
         <asp:BoundField DataField="role" HeaderText="Role" />
+
+
+        <asp:TemplateField HeaderText="Memo Count">
+            <ItemTemplate>
+                <asp:Label ID="lblMemoCount" runat="server" Text='<%# Eval("memoCount") %>'></asp:Label>
+            </ItemTemplate>
+        </asp:TemplateField>
+
+
+        <asp:TemplateField>
+            <ItemTemplate>
+                <asp:LinkButton ID="btnClearMemos" runat="server" Text="Clear Memos" CommandName="ClearMemos" CommandArgument='<%# Eval("username") %>' />
+            </ItemTemplate>
+        </asp:TemplateField>
 
         <asp:TemplateField>
             <ItemTemplate>

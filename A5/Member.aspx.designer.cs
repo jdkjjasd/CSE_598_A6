@@ -24,5 +24,9 @@ namespace A5
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         protected global::System.Web.UI.WebControls.Label lblUsername;
         protected global::System.Web.UI.WebControls.Button btnBack;
+        protected global::System.Web.UI.WebControls.GridView gvMemos;
+        protected global::System.Web.UI.WebControls.TextBox txtReminder;
+        protected global::System.Web.UI.WebControls.Button btnAddMemo;
+        protected global::System.Web.UI.WebControls.Label lblMessage;
     }
 }

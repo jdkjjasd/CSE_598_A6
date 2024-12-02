@@ -16,15 +16,38 @@ using WebGrease.Extensions;
 
 namespace A5
 {
+
+    [Serializable]
+    public class Memo
+    {
+        public Memo() { }
+
+        [XmlAttribute("Timestamp")]
+        public string Timestamp { get; set; }
+
+        [XmlElement("Reminder")]
+        public string Reminder { get; set; }
+    }
     [Serializable]
     public class Account
     {
         public string username { get; set; }
         public string enc_password { get; set; }
         public int role { get; set; }
-        public Account() 
+
+        [XmlIgnore]
+        public Dictionary<int, Memo> Memos { get; set; } = new Dictionary<int, Memo>();
+
+        [XmlArray("Memos")]
+        [XmlArrayItem("MemoEntry")]
+        public MemoEntry[] MemoEntries
         {
+            get => Memos?.Select(kvp => new MemoEntry { Key = kvp.Key, Value = kvp.Value }).ToArray();
+            set => Memos = value?.ToDictionary(entry => entry.Key, entry => entry.Value);
         }
+
+        public Account() { }
+
         public Account(string username, string enc_password, int role)
         {
             this.username = username;
@@ -32,6 +55,17 @@ namespace A5
             this.role = role;
         }
     }
+
+    [Serializable]
+    public class MemoEntry
+    {
+        [XmlAttribute("Key")]
+        public int Key { get; set; }
+
+        [XmlElement("Memo")]
+        public Memo Value { get; set; }
+    }
+
 
     [Serializable]
     public class AccountEntry
@@ -374,25 +408,71 @@ namespace A5
             return 0;
         }
 
-        private void Read_User_Xml()
+        public void Read_User_Xml()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(AccountList));
             using (TextReader reader = new StreamReader(accountFilePath))
             {
                 this.accountList = (AccountList)serializer.Deserialize(reader);
                 accounts = accountList.AccountsDictionary;
-
-                //foreach (var kvp in accounts)
-                //{
-                //    using (StreamWriter writer = new StreamWriter(logFilePath, true))
-                //    {
-                //        Console.SetOut(writer);
-                //        Console.WriteLine("This is a log message." + AppDomain.CurrentDomain.BaseDirectory);
-                //        Console.WriteLine($"Username: {kvp.Key}, Role: {kvp.Value.role}");
-                //        writer.Flush();
-                //    }
-                //}
             }
+        }
+
+
+        public void AddMemo(string username, string timestamp, string reminder)
+        {
+            if (accounts.ContainsKey(username))
+            {
+                var account = accounts[username];
+                int newKey = account.Memos.Keys.Any() ? account.Memos.Keys.Max() + 1 : 1; 
+                account.Memos[newKey] = new Memo { Timestamp = timestamp, Reminder = reminder };
+                Save_User_Xml(accountList, accountFilePath);
+                Read_User_Xml();
+            }
+        }
+
+        /// <summary>
+        /// remove memo from the account list
+        /// index < 0 remove all memos
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="index"></param>
+        /// <returns>
+        /// return 1 for success,2 for memo not found,3 for user not found
+        /// </returns>
+        public int RemoveMemo(string username, int index)
+        {
+            if (accounts.ContainsKey(username))
+            {
+                var account = accounts[username];
+
+                if (index < 0)
+                {
+                    account.Memos.Clear();
+                }
+                else if (account.Memos.ContainsKey(index))
+                {
+                    account.Memos.Remove(index);
+                }
+                else
+                {
+                    // Memo with index {index} does not exist for user {username}.
+                    return 2;
+                }
+
+                Save_User_Xml(accountList, accountFilePath);
+                Read_User_Xml();
+                return 1;
+            }
+            else
+            {
+                // User {username} does not exist.;
+                return 3;
+            }
+        }
+        public Dictionary<int, Memo> GetMemos(string username)
+        {
+            return accounts.ContainsKey(username) ? accounts[username].Memos : null;
         }
 
         //public int GetUserRole(User user) //get by User

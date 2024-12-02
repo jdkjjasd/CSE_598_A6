@@ -11,6 +11,30 @@
             <h1>Member Page</h1>
             <p>Welcome, <asp:Label ID="lblUsername" runat="server" Text=""></asp:Label>!</p>
             <p>This is a page accessible only to registered members.</p>
+            <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+
+
+
+            <asp:TextBox ID="txtReminder" runat="server" Placeholder="Enter Reminder"></asp:TextBox>
+            <asp:Button ID="btnAddMemo" runat="server" Text="Add Memo" OnClick="btnAddMemo_Click" />
+            <br /><br />
+
+            <asp:GridView ID="gvMemos" runat="server" AutoGenerateColumns="False" CssClass="table" DataKeyNames="Key"
+                OnRowCommand="gvMemos_RowCommand">
+                <Columns>
+                    <asp:BoundField DataField="Timestamp" HeaderText="Timestamp" />
+                    <asp:BoundField DataField="Reminder" HeaderText="Reminder" />
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:LinkButton ID="btnDeleteMemo" runat="server" Text="Delete" CommandName="DeleteMemo" CommandArgument='<%# Container.DataItemIndex %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+
+            <br />
+
+
             <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="btnBack_Click" />
         </div>
     </form>

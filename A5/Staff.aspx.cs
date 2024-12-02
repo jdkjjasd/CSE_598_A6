@@ -48,7 +48,8 @@ namespace A5
             {
                 username = account.username,
                 enc_password = account.enc_password,
-                role = account.role == 1 ? "Staff" : account.role == 2 ? "Member" : "Unknown"
+                role = account.role == 1 ? "Staff" : account.role == 2 ? "Member" : "Unknown",
+                memoCount = account.Memos?.Count ?? 0 
             }).ToList();
 
             gvAccounts.DataSource = accountList;
@@ -70,6 +71,20 @@ namespace A5
 
             BindAccountGrid();
 
+        }
+
+        protected void gvAccounts_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "ClearMemos")
+            {
+                string username = e.CommandArgument.ToString();
+
+                LoginControl.Instance.RemoveMemo(username, -1);
+
+                lblMessage.Text = $"All memos for user '{username}' have been cleared.";
+
+                BindAccountGrid();
+            }
         }
 
 
